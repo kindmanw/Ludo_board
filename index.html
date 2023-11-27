@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ludo</title>
+</head>
+<body>
+
+    <style type="text/css">
+        .board{
+            margin: 10px auto;
+            border: 2px solid #000;
+            width: fit-content;
+        }
+        .row{
+            display: flex;
+        }
+        .red{
+            background-color: #FF0000;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            background-color: #FFCC00;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .red-box{
+            background-color: #FF0000;
+            width: 258px;
+            height: 255px;
+            border: 1px solid #000;
+        }
+        .green-board{
+            background-color: green;
+            width: 258px;
+            height: 255px;
+            border: 1px solid #000;
+        }
+        .yellow-box{
+            background-color: yellow;
+            width: 258px;
+            height: 255px;
+            border: 1px solid #000; 
+        }
+        .blue-box{
+            background-color: blue;
+            width: 258px;
+            height: 255px;
+            border: 1px solid #000;
+        }
+        .white-box{
+            background-color: #fff;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            margin: 20% auto;
+        }
+        .white-box .circle{
+            border-radius:50%;
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin: 15px;
+            border: 1px solid #000;
+        }
+
+        .cell{
+                width:40px;
+                height: 40px;
+                border:1px solid #000;
+            }
+            .destination{
+                border-top: 63px solid green;
+                border-bottom:63px solid blue;
+                border-left:63px solid #FF0000;
+                border-right:63px solid #FFCC00;
+            }
+    </style>
+ <h1 style="text-align: center;">My Ludo_Board</h1> 
+ 
+ <div class="board">
+    <div class="row">
+        <div class="red-box">
+            <div class="white-box">
+                <div class="red circle"></div>
+                <div class="red circle"></div>
+                <div class="red circle"></div>
+                <div class="red circle"></div>
+            </div>
+        </div>
+        <div class="cell-container">
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell "></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell green"></div>
+                <div class="cell green"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell green"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell green"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell green"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell green"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+        <div class="green-board">
+            <div class="white-box">
+                <div class="green circle"></div>
+                <div class="green circle"></div>
+                <div class="green circle"></div>
+                <div class="green circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell-container">
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell red"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell red"></div>
+                <div class="cell red"></div>
+                <div class="cell red"></div>
+                <div class="cell red"></div>
+                <div class="cell red"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            </div>
+            <div class="destination"></div>
+            <div class="cell-container">
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell yellow"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell"></div>
+                </div> 
+            </div>
+        </div> 
+        <div class="row">
+            <div class="blue-box">
+                <div class="white-box">
+                    <div class="blue circle"></div>
+                    <div class="blue circle"></div>
+                    <div class="blue circle"></div>
+                    <div class="blue circle"></div>
+                </div>
+            </div>
+            <div class="cell-container">
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell blue"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell blue"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell blue"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell blue"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell blue"></div>
+                    <div class="cell blue"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell "></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+            <div class="yellow-box">
+                <div class="white-box">
+                    <div class="yellow circle"></div>
+                    <div class="yellow circle"></div>
+                    <div class="yellow circle"></div>
+                    <div class="yellow circle"></div>
+                </div>
+            </div>
+        </div>         
+    </div>
+ </div>
+</body>
+</html>
